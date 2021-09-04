@@ -3,4 +3,7 @@
   implementar colores y estilos de textos en la consola 
   
   ## dependencias
-   ' fsf '
+   ```cpp
+   #include <iostream>
+   #include <string>
+   ```
