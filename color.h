@@ -66,16 +66,9 @@ class console{
     
     string rgb(int r, int g, int b){
         try{
-         int leng = to_string(r).length();
-             if (leng < 3 || leng == 3){
-                leng = to_string(g).length();
-                if(leng < 3 || leng == 3){
-                    leng = to_string(b).length();
-                    if(leng < 3 || leng == 3){
+             if (r < 256 && g < 256 && b < 256){
                      return "\e[38;2;" + to_string(r) + ";" + to_string(g) + ";" + to_string(b) + "m";
-                    }
-                }
-            }
+             }  
          error.rgb = 1;
          return "";
         }catch(const std::exception& e){
@@ -85,4 +78,3 @@ class console{
       return "";
     }
 }console;
-
